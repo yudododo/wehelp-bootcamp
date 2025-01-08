@@ -70,12 +70,15 @@ body{
 
 .container{
   max-width: 1920px;
+  width: 100%; /* 確保在小屏幕上正常撐滿 */
   font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 80px;
 }
+
 .navbar{
   width:100%;
   display: flex;
@@ -121,7 +124,7 @@ li a:hover {
   /* width: 100%;  */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 50px 200px 200px 200px;
+  grid-template-rows: 50px 200px 200px ;
   gap: 20px; 
 }
 
@@ -235,13 +238,25 @@ li a:hover {
 }
 
 .burger{
-  padding: 5px;
+  padding: 8px;
 }
 
 .close{
   display: none;
   align-self: flex-end; /* 將 close 按鈕對齊到最右邊 */
-  padding: 5px;
+  padding: 8px;
+}
+
+ul.visible {
+  display: flex;
+}
+
+.burger.hidden {
+  display: none;
+}
+
+.close.show {
+  display: flex;
 }
 
 @media screen and (max-width: 1200px) {
@@ -331,4 +346,8 @@ li a:hover {
     height: 100vh; 
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.16);
     }
+  li{
+    width: 100%;
+    text-align: center;
+  }
 }
