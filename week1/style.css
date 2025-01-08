@@ -64,6 +64,10 @@ table {
 
 /* CSS reset end */
 
+body{
+  min-height: 100vh;
+} 
+
 .container{
   max-width: 1920px;
   font-size: 20px;
@@ -230,8 +234,14 @@ li a:hover {
   display: none;
 }
 
+.burger{
+  padding: 5px;
+}
+
 .close{
   display: none;
+  align-self: flex-end; /* 將 close 按鈕對齊到最右邊 */
+  padding: 5px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -305,10 +315,6 @@ li a:hover {
     display:flex;
     flex-direction: column;
   }
-  .menu{
-    position: relative;
-    
-  }
   .menu .burger{
     display: block;
   }
@@ -316,8 +322,9 @@ li a:hover {
     display: none;
     flex-direction: column;
     justify-content: start;
-    position:absolute;
-    top:100;
+    position: fixed;
+    z-index: 1;
+    top:0;
     right:0;
     background: #ffffff;
     width: 50vw;
