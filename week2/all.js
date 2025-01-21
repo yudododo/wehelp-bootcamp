@@ -1,5 +1,5 @@
+console.log('---task 1---');
 function findAndPrint(messages, currentStation) {
-  // your code here
   //indexOf()會判斷陣列中是否包含某個值，如果有包含就回傳這個值在陣列中的索引值，沒有回傳-1
   const friend = Object.keys(messages); //['Bob', 'Mary', 'Copper', 'Leslie', 'Vivian']
   const friendMessages = Object.values(messages); //['I'm at Ximen MRT station.', 'I have a drink near Jingmei MRT station.', 'I just saw a concert at Taipei Arena.', 'I'm at home near Xiaobitan station.', 'I'm at Xindian station waiting for you.']
@@ -54,7 +54,6 @@ function findAndPrint(messages, currentStation) {
   // console.log("absoluteDis",absoluteDis)
   // console.log("closestFriendIndex",closestFriendIndex)
   // console.log("currentStationIndex",currentStationIndex)
-
   console.log(closestFriendName);
 }
 const line = [
@@ -86,15 +85,22 @@ const messages = {
   Leslie: "I'm at home near Xiaobitan station.", //會出問題
   Vivian: "I'm at Xindian station waiting for you.",
 };
-console.log('---task 1---');
 findAndPrint(messages, 'Wanlong'); // print Mary
 findAndPrint(messages, 'Songshan'); // print Copper
 findAndPrint(messages, 'Qizhang'); // print Leslie  會出問題
 findAndPrint(messages, 'Ximen'); // print Bob
 findAndPrint(messages, 'Xindian City Hall'); // print Vivian  會出問題
 
+
+
+
+
+
+
+
+
+
 console.log('---task 2---');
-// your code here, maybe
 const consultantTimes = {
   John: [],
   Bob: [],
@@ -149,6 +155,15 @@ book(consultants, 11, 1, 'rate'); // Bob
 book(consultants, 11, 2, 'rate'); // No Service
 book(consultants, 14, 3, 'price'); // John
 
+
+
+
+
+
+
+
+
+
 console.log('---task 3---');
 function func(...data) {
   const newData = data.map((name) => {
@@ -188,6 +203,14 @@ func('彭大牆', '陳王明雅', '吳明'); // print 彭大牆
 func('郭靜雅', '王立強', '郭林靜宜', '郭立恆', '林花花'); // print 林花花
 func('郭宣雅', '林靜宜', '郭宣恆', '林靜花'); // print 沒有
 func('郭宣雅', '夏曼藍波安', '郭宣恆'); // print 夏曼藍波安
+
+
+
+
+
+
+
+
 
 console.log('---task 4---');
 function getNumber(index) {
