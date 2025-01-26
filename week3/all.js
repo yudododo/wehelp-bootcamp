@@ -99,7 +99,7 @@
 
 
 
-//task 2
+//task 3、4
 const menu = document.querySelector('.menu');
 const ul = document.querySelector('ul');
 const burger = document.querySelector('.burger');
