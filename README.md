@@ -25,6 +25,16 @@ Hope that you get a grasp of my current front end skills and help me improve wha
 2. JavaScript、Python 基本練習。
 3. JavaScript、Python 網路連線與資料運用。
 4. 架設 FastAPI 網站後端伺服器。
+    #### 路由詳解
+    | **路由**        | **方法** | **功能描述**                            | **需要的參數**           |
+    |-----------------|--------|------------------------------------------|-------------------------|
+    | `/`             | GET    | 顯示首頁，包含登入表單和計算平方數輸入框    |           |
+    | `/signin`       | POST   | 處理用戶登入，根據結果重定向至會員頁或錯誤頁 | `username`, `password`, `agreement` |
+    | `/member`       | GET    | 顯示會員頁，只有登錄用戶能訪問              |           |
+    | `/error`        | GET    | 顯示錯誤訊息頁面                          | `message`  |
+    | `/signout`      | GET    | 清除 session 並登出                       |           |
+    | `/square/{num}` | GET    | 顯示傳入數字的平方數                       | `num`     |
+
 5. 架設 MySQL 資料庫伺服器。
 6. 基礎會員系統開發。
 7. 前端 Fetch 後端 API 整合功能開發。

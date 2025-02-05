@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet" />
+    <!-- <link href="../static/styles.css" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="signin">
+        <h1>歡迎光臨，請輸入帳號密碼</h1>
+        <form action="/signin" method="post">
+          <label>
+            帳號 <input type="text" name="username" class="username" />
+          </label>
+          <label>
+            密碼 <input type="password" name="password" class="password" />
+          </label>
+          <label class="agreement">
+            <input type="checkbox" name="agreement" id="agreement" />
+            同意條款
+          </label>
+          <input type="submit" value="登入" class="btn" />
+        </form>
+      </div>
+      <div class="square">
+        <h1>計算正整數的平方</h1>
+        <!-- <form action="/square/{{num}}" method="get"> -->
+          <form>
+          <label>
+            正整數
+            <input type="number" name="num" class="num" required />
+          </label>
+          <input type="submit" value="計算" class="btn2" />
+        </form>
+      </div>
+    </div>
+    <script src="{{ url_for('static', path='/all.js') }}" async defer></script>
+    <!-- <script src="../static/all.js" async defer></script> -->
+  </body>
+</html>
