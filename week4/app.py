@@ -18,10 +18,8 @@ def home_page(request: Request):
 def signin(
   username: Annotated[str, Form()],
   password: Annotated[str, Form()],
-  agreement: Annotated[bool, Form()] = False,
   request: Request = None,
 ):
-  if agreement == True:
     if username =='' or password =='':
       return RedirectResponse(
         url="/error?message=Please+enter+username+and+password", 
@@ -35,8 +33,6 @@ def signin(
         url="/error?message=Username+or+password+is+not+correct", 
         status_code=303
       )
-  else:
-    return RedirectResponse(url="/", status_code=303)
   
 @app.get("/member", response_class=HTMLResponse)
 def member_page(request: Request):

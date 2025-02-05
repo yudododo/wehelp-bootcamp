@@ -1,9 +1,13 @@
 const btn = document.querySelector('.btn');
 const checkbox = document.querySelector('#agreement');
 const btn2 = document.querySelector(".btn2");
+const form = document.querySelector('#form');
 
-btn.addEventListener('click', () => {
-  if(!checkbox.checked){
+btn.addEventListener('click', (e) => {
+  if (checkbox.checked) {
+    form.submit();
+  }else{
+    e.preventDefault();
     alert('Please check the agreement');
   }
 });
