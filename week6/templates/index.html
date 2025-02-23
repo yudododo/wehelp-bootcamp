@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet" />
+    <!-- <link href="../static/styles.css" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="signup">
+        <h1>歡迎光臨，請註冊</h1>
+        <form id="signupForm" action="/signup" method="post">
+          <label>
+            姓名 <input type="text" name="name" id="name" />
+          </label>
+          <label>
+            帳號 <input type="text" name="username" id="username" />
+          </label>
+          <label>
+            密碼 <input type="password" name="password" id="password" />
+          </label>
+          <input type="submit" value="註冊" class="btn" />
+        </form>
+      </div>
+
+      <div class="signin">
+        <h1>登入系統</h1>
+        <form id="signinForm" action="/signin" method="post">
+          <label>
+            帳號 <input type="text" name="username" id="username2" />
+          </label>
+          <label>
+            密碼 <input type="password" name="password" id="password2" />
+          </label>
+          <input type="submit" value="登入" class="btn2" />
+        </form>
+      </div>
+    </div>
+    <!-- <script src="{{ url_for('static', path='/all.js') }}" async defer></script> -->
+    <script src="../static/all.js" async defer></script>
+  </body>
+</html>
